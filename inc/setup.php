@@ -58,6 +58,10 @@ if ( ! function_exists( 'anuncero_prensa_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// Premium Image Sizes for Grid
+		add_image_size( 'anuncero-grid-hero', 1200, 600, true ); // Hero banner
+		add_image_size( 'anuncero-grid-card', 600, 400, true ); // Standard grid card
 	}
 endif;
 add_action( 'after_setup_theme', 'anuncero_prensa_setup' );

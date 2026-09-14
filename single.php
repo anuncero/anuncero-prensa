@@ -9,30 +9,55 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="container">
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class( 'single-post-container' ); ?>>
+					
+					<header class="single-header">
+						<div class="single-meta">
+							<?php echo get_the_date(); ?> &mdash; <?php the_category( ', ' ); ?>
+						</div>
+						<h1 class="single-title"><?php the_title(); ?></h1>
+					</header>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class="single-thumbnail">
+							<?php the_post_thumbnail( 'full' ); ?>
+						</div>
+					<?php else : ?>
+						<div class="single-thumbnail">
+							<img src="https://picsum.photos/seed/<?php echo get_the_ID(); ?>/1200/600" alt="Placeholder">
+						</div>
+					<?php endif; ?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+					<div class="entry-content">
+						<?php
+						the_content();
+						
+						wp_link_pages(
+							array(
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'anuncero-prensa' ),
+								'after'  => '</div>',
+							)
+						);
+						?>
+					</div><!-- .entry-content -->
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'anuncero-prensa' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'anuncero-prensa' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+				</article>
+				<?php
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
 
-		endwhile; // End of the loop.
-		?>
-
+			endwhile; // End of the loop.
+			?>
+		</div><!-- .container -->
 	</main><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

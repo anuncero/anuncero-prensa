@@ -1,94 +1,176 @@
 /* 
- * Anuncero Prensa - Main Stylesheet
+ * Anuncero Prensa - Premium Stylesheet
  * 
- * Includes CSS variables, lean reset, base typography, and structural components.
- * Follows Mobile-First approach.
+ * Strict compliance with Anuncero Brand Guidelines and Redesign rules.
+ * High contrast, B2B editorial, subtle micro-animations, noise textures.
  */
 
 :root {
-	/* Brand Colors */
-	--color-primary: #0a0a0a;
-	--color-secondary: #f0f0f0;
-	--color-accent: #e3342f; /* Red for news accents */
+	/* Palette (Editorial B2B de Alto Contraste) */
+	--bg-main: #FAF8F5; /* Papel Prensa */
+	--bg-elevated: #FFFFFF;
+	--bg-inverse: #111625;
+	--text-main: #111625; /* Tinta Húmeda */
+	--text-muted: #475569; /* Muted Slate */
 	
-	/* Typography */
-	--font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	--font-secondary: 'Merriweather', serif; /* For editorial feeling */
+	--brand-accent: #00a2ff;
+	--brand-active: #0050B3;
+	--brand-success: #15803d;
+	--brand-warning: #b45309;
+	--brand-danger: #b91c1c;
+	
+	--border-struct: #CBD5E1;
+	--border-subtle: #E4E0D5;
 
-	/* Spacing & Structure */
-	--spacing-sm: 0.5rem;
-	--spacing-md: 1rem;
-	--spacing-lg: 2rem;
-	--spacing-xl: 4rem;
-	--container-width: 1200px;
+	/* Typography */
+	--font-ui: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	--font-body: 'Merriweather', Georgia, serif;
+	
+	/* Spacing */
+	--space-xs: 0.25rem;
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 2rem;
+	--space-xl: 4rem;
+	--space-2xl: 8rem;
+
+	/* Structural */
+	--radius: 4px;
+	--container: 1280px;
+	--content-width: 720px;
+	
+	/* Shadows */
+	--shadow-sm: 0 1px 2px 0 rgba(17, 22, 37, 0.05);
+	--shadow-md: 0 4px 6px -1px rgba(17, 22, 37, 0.1), 0 2px 4px -1px rgba(17, 22, 37, 0.06);
+	--shadow-lg: 0 10px 15px -3px rgba(17, 22, 37, 0.1), 0 4px 6px -2px rgba(17, 22, 37, 0.05);
+	
+	/* Animation Easing */
+	--ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+	--ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* Base Reset */
+/* ==========================================================================
+   Resets & Base
+   ========================================================================== */
 *, *::before, *::after {
 	box-sizing: border-box;
 }
+
 body {
 	margin: 0;
-	font-family: var(--font-primary);
+	background-color: var(--bg-main);
+	color: var(--text-main);
+	font-family: var(--font-body);
 	line-height: 1.6;
-	color: var(--color-primary);
-	background-color: #ffffff;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	overflow-x: hidden;
 }
+
+/* Texture Overlay */
+body::before {
+	content: '';
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 9999;
+	pointer-events: none;
+	opacity: 0.03;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
 h1, h2, h3, h4, h5, h6 {
-	margin-top: 0;
+	font-family: var(--font-ui);
 	font-weight: 700;
-	line-height: 1.2;
+	color: var(--text-main);
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	text-wrap: balance;
+	margin-top: 0;
+	margin-bottom: var(--space-md);
 }
+
 a {
-	color: var(--color-accent);
+	color: var(--brand-active);
 	text-decoration: none;
-	transition: color 0.3s ease;
+	transition: color 160ms var(--ease-out);
 }
 a:hover {
-	color: #b0231f;
+	color: var(--brand-accent);
 }
 img {
 	max-width: 100%;
 	height: auto;
 	display: block;
+	border-radius: var(--radius);
+	object-fit: cover;
+}
+button, .button {
+	font-family: var(--font-ui);
+	font-weight: 500;
+	border-radius: var(--radius);
+	cursor: pointer;
+	transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out);
+}
+button:active, .button:active {
+	transform: scale(0.98);
 }
 
-/* Layout */
+/* ==========================================================================
+   Layout & Structure
+   ========================================================================== */
 .site {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
-}
-.site-main {
-	flex: 1;
-	width: 100%;
-	max-width: var(--container-width);
-	margin: 0 auto;
-	padding: var(--spacing-lg) var(--spacing-md);
+	min-height: 100dvh;
 }
 
-/* Header */
+.container {
+	width: 100%;
+	max-width: var(--container);
+	margin: 0 auto;
+	padding: 0 var(--space-lg);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
 .site-header {
-	border-bottom: 1px solid #eaeaea;
-	padding: var(--spacing-md);
-	background: #fff;
+	background-color: var(--bg-elevated);
+	border-bottom: 1px solid var(--border-subtle);
 	position: sticky;
 	top: 0;
-	z-index: 100;
+	z-index: 1000;
+	padding: var(--space-md) 0;
+	box-shadow: var(--shadow-sm);
+}
+.site-header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .site-branding {
-	text-align: center;
-	margin-bottom: var(--spacing-md);
+	display: flex;
+	align-items: center;
+	gap: var(--space-sm);
 }
 .site-title {
-	font-size: 2rem;
+	font-size: 1.5rem;
+	font-weight: 800;
 	margin: 0;
-	text-transform: uppercase;
-	letter-spacing: -0.5px;
+	letter-spacing: -0.03em;
 }
 .site-title a {
-	color: var(--color-primary);
+	color: var(--text-main);
+}
+.site-description {
+	display: none;
+	font-family: var(--font-ui);
+	font-size: 0.85rem;
+	color: var(--text-muted);
+	border-left: 1px solid var(--border-struct);
+	padding-left: var(--space-sm);
+	margin: 0;
 }
 
 /* Navigation */
@@ -97,48 +179,207 @@ img {
 	padding: 0;
 	margin: 0;
 	display: flex;
-	justify-content: center;
-	gap: var(--spacing-md);
-	flex-wrap: wrap;
+	gap: var(--space-lg);
+	font-family: var(--font-ui);
 }
 .main-navigation a {
-	color: #333;
+	color: var(--text-muted);
 	font-weight: 500;
-	text-transform: uppercase;
-	font-size: 0.9rem;
+	font-size: 0.95rem;
+	position: relative;
 }
 .main-navigation a:hover {
-	color: var(--color-accent);
+	color: var(--text-main);
+}
+.main-navigation a::after {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: var(--brand-accent);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 250ms var(--ease-out);
+}
+.main-navigation a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+.menu-toggle {
+	display: none;
+	background: none;
+	border: 1px solid var(--border-struct);
+	padding: var(--space-sm) var(--space-md);
+	color: var(--text-main);
 }
 
-/* Articles */
-.entry-header {
-	margin-bottom: var(--spacing-md);
+/* ==========================================================================
+   Home / Grid Asimétrico
+   ========================================================================== */
+.site-main {
+	padding: var(--space-xl) 0;
 }
-.entry-title {
+.news-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-lg);
+}
+.post-card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	opacity: 0;
+	transform: translateY(20px);
+}
+/* Entradas suaves por observer */
+.post-card.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+}
+.post-card-thumb {
+	overflow: hidden;
+	border-radius: var(--radius);
+	aspect-ratio: 16/9;
+	background: var(--border-subtle);
+}
+.post-card-thumb img {
+	width: 100%;
+	height: 100%;
+	transition: transform 500ms var(--ease-out);
+}
+.post-card:hover .post-card-thumb img {
+	transform: scale(1.03);
+}
+.post-meta {
+	font-family: var(--font-ui);
+	font-size: 0.8rem;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: var(--space-xs);
+}
+.post-title {
 	font-size: 1.5rem;
-	margin-bottom: var(--spacing-sm);
+	margin-bottom: var(--space-xs);
 }
-.entry-title a {
-	color: var(--color-primary);
+.post-title a {
+	color: var(--text-main);
 }
-.entry-meta {
-	font-size: 0.85rem;
-	color: #666;
+.post-title a:hover {
+	color: var(--brand-active);
+}
+.post-excerpt {
+	color: var(--text-muted);
+	font-size: 0.95rem;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
-/* Desktop Enhancements */
+/* Featured Post (Hero) */
+.post-hero {
+	grid-column: 1 / -1;
+	margin-bottom: var(--space-lg);
+}
+.post-hero .post-card-thumb {
+	aspect-ratio: 21/9;
+}
+.post-hero .post-title {
+	font-size: 2.5rem;
+}
+
+/* ==========================================================================
+   Single Post
+   ========================================================================== */
+.single-post-container {
+	max-width: var(--content-width);
+	margin: 0 auto;
+}
+.single-header {
+	text-align: center;
+	margin-bottom: var(--space-xl);
+}
+.single-title {
+	font-size: 3rem;
+	margin-bottom: var(--space-md);
+}
+.single-meta {
+	font-family: var(--font-ui);
+	color: var(--text-muted);
+	font-size: 0.9rem;
+}
+.single-thumbnail {
+	margin-bottom: var(--space-xl);
+	aspect-ratio: 16/9;
+	width: 100%;
+}
+.entry-content {
+	font-size: 1.125rem;
+}
+.entry-content p {
+	margin-bottom: var(--space-md);
+}
+.entry-content h2, .entry-content h3 {
+	margin-top: var(--space-lg);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+	background-color: var(--bg-inverse);
+	color: var(--bg-main);
+	padding: var(--space-xl) 0;
+	margin-top: auto;
+	font-family: var(--font-ui);
+}
+.site-footer a {
+	color: var(--border-struct);
+}
+.site-footer a:hover {
+	color: var(--bg-main);
+}
+.site-footer-inner {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-lg);
+}
+.footer-logo {
+	font-size: 1.5rem;
+	font-weight: 800;
+	margin-bottom: var(--space-xs);
+	letter-spacing: -0.02em;
+}
+.site-info {
+	font-size: 0.875rem;
+	color: var(--text-muted);
+	border-top: 1px solid rgba(255,255,255,0.1);
+	padding-top: var(--space-md);
+	margin-top: var(--space-xl);
+	display: flex;
+	justify-content: space-between;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
 @media (min-width: 768px) {
-	.site-header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+	.site-header-inner {
+		flex-wrap: nowrap;
 	}
-	.site-branding {
-		margin-bottom: 0;
-		text-align: left;
+	.site-description {
+		display: block;
 	}
-	.entry-title {
-		font-size: 2.25rem;
+	.news-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (min-width: 1024px) {
+	.news-grid {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }

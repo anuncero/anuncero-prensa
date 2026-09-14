@@ -14,8 +14,15 @@ Si tienes un medio de comunicación o portal de noticias y quieres empezar a **m
 
 **[Regístrate gratis en Anuncero.press](https://anuncero.press)** y descubre cómo revolucionamos el modelo publicitario para editores independientes.
 
-[![Síguenos en X](https://img.shields.io/twitter/follow/anuncero?style=social)](https://twitter.com/anuncero)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anuncero-blue)](https://linkedin.com/company/anuncero)
+---
+
+### Síguenos en nuestras redes:
+
+* [Instagram (@anuncero)](https://www.instagram.com/anuncero)
+* [Facebook (Anuncero)](https://www.facebook.com/profile.php?id=61578114412350)
+* [TikTok (@anuncerooficial)](https://www.tiktok.com/@anuncerooficial)
+* [X / Twitter (@anuncero)](https://x.com/anuncero)
+* [LinkedIn (Anuncero)](https://linkedin.com/company/anuncero)
 
 ---
 

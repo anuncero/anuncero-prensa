@@ -18,11 +18,23 @@ Si tienes un medio de comunicación o portal de noticias y quieres empezar a **m
 
 ### Síguenos en nuestras redes:
 
+* [Telegram (Comunidad Oficial)](https://t.me/+ZGXYAczDlVE5MWRh)
 * [Instagram (@anuncero)](https://www.instagram.com/anuncero)
 * [Facebook (Anuncero)](https://www.facebook.com/profile.php?id=61578114412350)
 * [TikTok (@anuncerooficial)](https://www.tiktok.com/@anuncerooficial)
 * [X / Twitter (@anuncero)](https://x.com/anuncero)
 * [LinkedIn (Anuncero)](https://linkedin.com/company/anuncero)
+
+---
+
+## ⚠️ Aviso de Desarrollo y Token (Crypto)
+
+Anuncero se encuentra actualmente en **fase de desarrollo activo**. Como mecanismo de autofinanciación para asegurar el futuro y la escalabilidad del proyecto, estamos creando un **Cripto Token oficial de Anuncero**. 
+
+El lanzamiento de este token, junto con toda la información técnica y económica, **será notificado única y exclusivamente a través de nuestro grupo oficial de [Telegram](https://t.me/+ZGXYAczDlVE5MWRh)** y nuestras redes sociales oficiales cuando esté listo (actualmente NO existe). Te invitamos a unirte al grupo para estar al tanto de las novedades.
+
+> **Descargo de Responsabilidad Legal (Legal Disclaimer - Nacional e Internacional):**  
+> La mención o futuro desarrollo de este Token tiene fines estricta y exclusivamente vinculados a la autofinanciación del proyecto tecnológico "Anuncero". **Bajo ninguna circunstancia esto constituye asesoramiento financiero, recomendación de inversión, ni una oferta de venta de valores** en ninguna jurisdicción. Las criptomonedas son activos de alto riesgo y alta volatilidad. No alentamos ni recomendamos la compra de dicho activo a ninguna persona. Cualquier adquisición futura correrá bajo la exclusiva responsabilidad y riesgo del adquirente, renunciando expresamente a cualquier reclamo legal, civil, penal o comercial contra los desarrolladores de Anuncero a nivel nacional (República Argentina) e internacional.
 
 ---
 

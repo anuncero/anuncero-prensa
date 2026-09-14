@@ -1,0 +1,18 @@
+/*
+Theme Name: Anuncero Prensa
+Theme URI: https://anuncero.com
+Author: Anuncero
+Author URI: https://anuncero.com
+Description: Tema oficial desarrollado por Anuncero con altos estándares de ingeniería, modularidad, diseño profesional para noticias/medios y optimización SEO (Core Web Vitals).
+Version: 1.0.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: anuncero-prensa
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, block-styles, news, blog
+*/
+
+/* 
+ * NOTA: Los estilos principales y modulares de este tema
+ * se encuentran alojados en la carpeta /assets/css/ y
+ * son encolados a través de inc/enqueue.php.
+ */

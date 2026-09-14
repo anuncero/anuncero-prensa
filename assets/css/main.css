@@ -1,0 +1,144 @@
+/* 
+ * Anuncero Prensa - Main Stylesheet
+ * 
+ * Includes CSS variables, lean reset, base typography, and structural components.
+ * Follows Mobile-First approach.
+ */
+
+:root {
+	/* Brand Colors */
+	--color-primary: #0a0a0a;
+	--color-secondary: #f0f0f0;
+	--color-accent: #e3342f; /* Red for news accents */
+	
+	/* Typography */
+	--font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	--font-secondary: 'Merriweather', serif; /* For editorial feeling */
+
+	/* Spacing & Structure */
+	--spacing-sm: 0.5rem;
+	--spacing-md: 1rem;
+	--spacing-lg: 2rem;
+	--spacing-xl: 4rem;
+	--container-width: 1200px;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: var(--font-primary);
+	line-height: 1.6;
+	color: var(--color-primary);
+	background-color: #ffffff;
+	-webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	font-weight: 700;
+	line-height: 1.2;
+}
+a {
+	color: var(--color-accent);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+a:hover {
+	color: #b0231f;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Layout */
+.site {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.site-main {
+	flex: 1;
+	width: 100%;
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding: var(--spacing-lg) var(--spacing-md);
+}
+
+/* Header */
+.site-header {
+	border-bottom: 1px solid #eaeaea;
+	padding: var(--spacing-md);
+	background: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+.site-branding {
+	text-align: center;
+	margin-bottom: var(--spacing-md);
+}
+.site-title {
+	font-size: 2rem;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: -0.5px;
+}
+.site-title a {
+	color: var(--color-primary);
+}
+
+/* Navigation */
+.main-navigation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	gap: var(--spacing-md);
+	flex-wrap: wrap;
+}
+.main-navigation a {
+	color: #333;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+}
+.main-navigation a:hover {
+	color: var(--color-accent);
+}
+
+/* Articles */
+.entry-header {
+	margin-bottom: var(--spacing-md);
+}
+.entry-title {
+	font-size: 1.5rem;
+	margin-bottom: var(--spacing-sm);
+}
+.entry-title a {
+	color: var(--color-primary);
+}
+.entry-meta {
+	font-size: 0.85rem;
+	color: #666;
+}
+
+/* Desktop Enhancements */
+@media (min-width: 768px) {
+	.site-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.site-branding {
+		margin-bottom: 0;
+		text-align: left;
+	}
+	.entry-title {
+		font-size: 2.25rem;
+	}
+}

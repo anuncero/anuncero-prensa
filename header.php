@@ -34,7 +34,9 @@
 					the_custom_logo();
 				} else {
 					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-logo-link">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_anuncero.png" alt="Anuncero Logo" class="site-logo">
+					</a>
 					<?php
 				}
 				$anuncero_prensa_description = get_bloginfo( 'description', 'display' );

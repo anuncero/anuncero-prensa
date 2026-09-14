@@ -1,38 +1,38 @@
-# Anuncero Prensa
+# 🗞️ Anuncero Prensa – Premium B2B Editorial Theme
 
-**Anuncero Prensa** es un template (tema) para WordPress desarrollado desde cero con estándares modernos de ingeniería de software (principios SOLID), diseñado específicamente para portales de noticias, medios y blogs. 
+![Anuncero Prensa](https://anuncero.com/assets/img/og-image.jpg)
 
-## Características
+**Anuncero Prensa** es un tema de WordPress de altísima calidad (Premium UI) diseñado para plataformas de noticias, periodismo B2B y revistas digitales. Está construido sobre principios de **arquitectura SOLID**, enfocado al 100% en la optimización SEO, *Core Web Vitals* y un sistema de diseño "Brutal UI".
 
-- **Diseño Moderno y Profesional:** Orientado a medios de comunicación, con una excelente jerarquía visual y tipográfica.
-- **Mobile-First & Responsivo:** Adaptado completamente a dispositivos móviles, tablets y escritorios.
-- **SEO Optimizado:** Estructura semántica en HTML5 (uso de `<article>`, `<main>`, `<aside>`, etc.) e inyección automática de metadatos Open Graph y Twitter Cards directamente en el `<head>`.
-- **Arquitectura Limpia:** Organización modular con separación de lógicas (funciones, hooks y estilos en `/inc/` y `/assets/`), evitando un `functions.php` saturado.
-- **Performance de Vanguarda:** Carga ligera, cumpliendo con buenas prácticas para Google Core Web Vitals, sin scripts bloqueantes.
-- **Licencia MIT:** Código abierto y seguro para su uso.
+---
 
-## Estructura de Directorios
+## 🚀 Patrocinado por Anuncero.press
 
-- `/assets/`: Contiene los archivos estáticos (`css`, `js`, `images`).
-- `/inc/`: Módulos de lógica PHP (configuración de soporte del tema, encolado de scripts, generación de SEO, etc).
-- Raíz: Archivos base del template requeridos por WordPress (`style.css`, `index.php`, `functions.php`, etc.).
+Este tema es 100% de código abierto (MIT) y ha sido desarrollado y liberado al público por el equipo de ingeniería de **[Anuncero.press](https://anuncero.press)**. 
 
-## Instalación
+Si tienes un medio de comunicación o portal de noticias y quieres empezar a **monetizar tu tráfico vendiendo banners directamente a anunciantes sin intermediarios**, utiliza nuestra plataforma.
 
-1. Clona o descarga el repositorio dentro del directorio `wp-content/themes/` de tu instalación de WordPress:
-   ```bash
-   git clone <URL_DEL_REPOSITORIO> wp-content/themes/anuncero-prensa
-   ```
-2. Ve a la sección **Apariencia > Temas** en tu panel de administración de WordPress.
-3. Encuentra "Anuncero Prensa" y haz clic en **Activar**.
+👉 **[Regístrate gratis en Anuncero.press](https://anuncero.press)** y descubre cómo revolucionamos el modelo publicitario para editores independientes.
 
-## Tecnologías Utilizadas
-- WordPress Theme API
-- HTML5 & CSS3 Vanilla
-- JavaScript Moderno (ES6)
+[![Síguenos en X](https://img.shields.io/twitter/follow/anuncero?style=social)](https://twitter.com/anuncero)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anuncero-blue)](https://linkedin.com/company/anuncero)
 
-## Autoría
-Desarrollado por **Anuncero**.
+---
 
-## Licencia
-Este proyecto está licenciado bajo la licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+## 🎨 Características del Tema
+
+- **Diseño Asimétrico y Staggered:** Grillas de noticias que se renderizan mediante IntersectionObservers con una entrada escalonada ultra-suave.
+- **Tipografía de Alta Gama:** Uso de `Outfit` para UI/Titulares y `Merriweather` para el cuerpo del texto. Limitación del ancho a 720px para una lectura inmersiva sin fatiga visual.
+- **Micro-animaciones (UX):** Feedback sensorial en botones, zoom-in sutil en portadas (scale: 1.03) e interacción táctil en todos los links.
+- **Sin Dependencias Innecesarias:** `0` div soup, `0` jQuery, CSS fluido e independiente sin frameworks pesados.
+- **Preparado para Autores:** Caja de autor nativa (Author Box), relacionados y compartición social integrada sin necesidad de plugins extra que ralenticen la web.
+
+## ⚙️ Instalación
+
+1. Descarga el repositorio en formato `.zip`.
+2. Súbelo a tu WordPress en `Apariencia > Temas > Añadir Nuevo`.
+3. Actívalo y asegúrate de configurar tu **Logo Customizado** (opcional, por defecto cargará el diseño elegante de Anuncero).
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Eres libre de usarlo, modificarlo y distribuirlo, pero te agradecemos si dejas los créditos de desarrollo apuntando hacia [Anuncero.press](https://anuncero.press).

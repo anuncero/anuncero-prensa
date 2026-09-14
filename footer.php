@@ -9,7 +9,9 @@
 		<div class="container site-footer-inner">
 			
 			<div class="footer-brand">
-				<div class="footer-logo">Anuncero</div>
+				<div class="footer-logo">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_anuncero.png" alt="Anuncero Logo" class="site-logo-footer">
+				</div>
 				<p>Periodismo de alta gama. B2B & Negocios.</p>
 			</div>
 

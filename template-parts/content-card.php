@@ -1,0 +1,35 @@
+<?php
+/**
+ * Template part for displaying a standard post card
+ *
+ * @package Anuncero_Prensa
+ */
+?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-card is-visible' ); ?>>
+	
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="post-card-thumb">
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'anuncero-grid-card' ); ?>
+			</a>
+		</div>
+	<?php else : ?>
+		<!-- Placeholder from Picsum for visual consistency if no thumbnail -->
+		<div class="post-card-thumb">
+			<a href="<?php the_permalink(); ?>">
+				<img src="https://picsum.photos/seed/<?php echo get_the_ID(); ?>/600/400" alt="Placeholder">
+			</a>
+		</div>
+	<?php endif; ?>
+
+	<div class="post-card-content">
+		<div class="post-meta">
+			<?php echo get_the_date(); ?> &mdash; <?php the_category( ', ' ); ?>
+		</div>
+		
+		<h2 class="post-title" style="font-size: 1.25rem;">
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		</h2>
+	</div>
+
+</article>

@@ -8,11 +8,40 @@
 	<footer id="colophon" class="site-footer">
 		<div class="container site-footer-inner">
 			
-			<div class="footer-brand">
-				<div class="footer-logo">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_anuncero.png" alt="Anuncero Logo" class="site-logo-footer">
+			<div class="footer-widgets">
+				<div class="footer-col-1">
+					<div class="footer-brand" style="margin-bottom: var(--space-md);">
+						<div class="footer-logo">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_anuncero.png" alt="Anuncero Logo" class="site-logo-footer">
+						</div>
+						<p style="margin-top: 10px; color: var(--border-struct);">Periodismo de alta gama. B2B & Negocios.</p>
+					</div>
+					<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+						<?php dynamic_sidebar( 'footer-1' ); ?>
+					<?php endif; ?>
 				</div>
-				<p>Periodismo de alta gama. B2B & Negocios.</p>
+				
+				<div class="footer-col-2">
+					<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
+						<?php dynamic_sidebar( 'footer-2' ); ?>
+					<?php else: ?>
+						<h3 class="widget-title">Empresa</h3>
+						<ul style="list-style: none; padding: 0;">
+							<li><a href="#">Sobre Nosotros</a></li>
+							<li><a href="#">Anúnciate con nosotros</a></li>
+							<li><a href="#">Términos y Condiciones</a></li>
+						</ul>
+					<?php endif; ?>
+				</div>
+
+				<div class="footer-col-3">
+					<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
+						<?php dynamic_sidebar( 'footer-3' ); ?>
+					<?php else: ?>
+						<h3 class="widget-title">Contacto</h3>
+						<p>info@anuncero.com</p>
+					<?php endif; ?>
+				</div>
 			</div>
 
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>
